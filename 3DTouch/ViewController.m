@@ -98,7 +98,7 @@
     }
 }
 
-//此方法是重按peek时，跳出pop的代理方法
+//此方法是重按peek时，跳入pop的代理方法
 - (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit
 {
     XSTableViewCell *cell = (XSTableViewCell *)previewingContext.sourceView;
@@ -127,7 +127,10 @@
     }
     cell.dataFrame = self.dataSource[indexPath.row];
     //给cell注册代理，使其支持3DTouch手势
-    [self registerForPreviewingWithDelegate:self sourceView:cell];
+    if (self.support3DTouch) {
+        [self registerForPreviewingWithDelegate:self sourceView:cell];
+    }
+    
     return cell;
     
 }

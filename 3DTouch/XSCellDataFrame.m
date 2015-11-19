@@ -19,7 +19,7 @@
     _headerRect = CGRectMake(10, 10, 60, 60);
     
     CGFloat nameX = CGRectGetMaxX(_headerRect);
-    CGFloat nameW = 100;
+    CGFloat nameW = 300;
     CGFloat nameH = 20;
     CGFloat nameY = _headerRect.origin.y;
     _nameRect   = CGRectMake(nameX, nameY, nameW, nameH);

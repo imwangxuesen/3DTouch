@@ -48,7 +48,7 @@
     self.headerImgView.frame = self.dataFrame.headerRect;
     
     self.nameLabel.text = self.dataFrame.cellData.name;
-    self.nameLabel.textAlignment = NSTextAlignmentCenter;
+    self.nameLabel.textAlignment = NSTextAlignmentLeft;
     self.nameLabel.frame = self.dataFrame.nameRect;
     
     
