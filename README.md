@@ -11,11 +11,10 @@
 
 
 > typedef NS_ENUM(NSInteger, UIForceTouchCapability) {  
-        > UIForceTouchCapabilityUnknown        = 0,  
-        > UIForceTouchCapabilityUnavailable    = 1,  
-        > UIForceTouchCapabilityAvailable      = 2
-
->     };
+        UIForceTouchCapabilityUnknown        = 0,  
+        UIForceTouchCapabilityUnavailable    = 1,  
+        UIForceTouchCapabilityAvailable      = 2
+> };
 
 > UIForceTouchCapabilityUnknown     : 未知的支持属性  
 > UIForceTouchCapabilityUnavailable : 不支持  
@@ -29,23 +28,19 @@
 `
 
 ###在生命周期函数中检测支持与否
-`- (void)viewWillAppear:(BOOL)animated {  
-  
-    [super viewWillAppear:animated];  
 
-    //检测当前是否支持3DTouch  
 
-    self.support3DTouch = [self support3DTouch];  
-  
-}
-`
+> - (void)viewWillAppear:(BOOL)animated {  
+>     [super viewWillAppear:animated];  
+>     //检测当前是否支持3DTouch  
+>     self.support3DTouch = [self support3DTouch];  
+> }
+
 
 ###在生命周期外检测支持与否（因为有可能出了生命周期函数而发生了变化）
 
-> - (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection NS_AVAILABLE_IOS(8_0) {  
-   
+> - (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection NS_AVAILABLE_IOS(8_0) {     
 >     self.support3DTouch = [self support3DTouch];  
-
 > }  
 
 ###检测是否支持3DTouch的方法
@@ -71,25 +66,26 @@
     你需要：  
     1，将工程中的info.plist拷贝一份到桌面－－> 右键 --> 打开方式 －－> 文本编辑  
     2，按照下边的键值粘贴复制即可   
-> <key>UIApplicationShortcutItems</key>  
-> <array>  
-> <dict>  
-> <key>UIApplicationShortcutItemIconFile</key>  
-> <string>icon1.png</string>  
-> <key>UIApplicationShortcutItemSubtitle</key>  
-> <string>这是中文名字</string>  
-> <key>UIApplicationShortcutItemTitle</key>  
-> <string>王学森</string>  
-> <key>UIApplicationShortcutItemType</key>  
-> <string>XS_3D_CHINESE</string>  
-> <key>UIApplicationShortcutItemUserInfo</key>  
-> <dict>  
-> <key>url</key>  
-> <string>中文名字王学森</string>  
-> </dict>  
-> </dict>  
-> </array>  
-
+`
+ <key>UIApplicationShortcutItems</key>  
+ <array>  
+ <dict>  
+ <key>UIApplicationShortcutItemIconFile</key>  
+ <string>icon1.png</string>  
+ <key>UIApplicationShortcutItemSubtitle</key>  
+ <string>这是中文名字</string>  
+ <key>UIApplicationShortcutItemTitle</key>  
+ <string>王学森</string>  
+ <key>UIApplicationShortcutItemType</key>  
+ <string>XS_3D_CHINESE</string>  
+ <key>UIApplicationShortcutItemUserInfo</key>  
+ <dict>  
+ <key>url</key>  
+ <string>中文名字王学森</string>  
+ </dict>  
+ </dict>  
+ </array>  
+`
     3，保存修改，然后将工程中的info.plist替换成桌面上的info.plist即可  
     4，也可以通过可视化的界面添加键值对，如下图：  
 ![info.plist](http://ww1.sinaimg.cn/bmiddle/006bdQ7qjw1ey6e0s0iafj311q0m4n7q.jpg)  
@@ -226,28 +222,22 @@
 `
 > - (NSArray\<id\<UIPreviewActionItem>> *)previewActionItems  
 > {  
-
 > // 生成UIPreviewAction  
 >     UIPreviewAction *action1 = [UIPreviewAction actionWithTitle:@"事件 1" style:UIPreviewActionStyleDefault                 handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >        NSLog(@"Action 1 selected");  
 >     }];  
-
 >     UIPreviewAction *action2 = [UIPreviewAction actionWithTitle:@"事件 2" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >         NSLog(@"Action 2 selected");  
 >     }];  
-
 >     UIPreviewAction *action3 = [UIPreviewAction actionWithTitle:@"事件 3" style:UIPreviewActionStyleSelected   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >         NSLog(@"Action 3 selected");  
 >     }];  
-
 >     UIPreviewAction *tap1 = [UIPreviewAction actionWithTitle:@"按钮 1" style:UIPreviewActionStyleDefault   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >         NSLog(@"tap 1 selected");  
 >     }];  
-
 >     UIPreviewAction *tap2 = [UIPreviewAction actionWithTitle:@"按钮 2" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >         NSLog(@"tap 2 selected");  
 >     }];  
-
 >     UIPreviewAction *tap3 = [UIPreviewAction actionWithTitle:@"按钮 3" style:UIPreviewActionStyleSelected   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >         NSLog(@"tap 3 selected");  
 >     }];  
