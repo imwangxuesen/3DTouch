@@ -68,6 +68,7 @@
     2，按照下边的键值粘贴复制即可   
 
 `
+
         <key>UIApplicationShortcutItems</key>         
 
             <array>               
@@ -109,63 +110,63 @@
 ### 方法 2:  
     使用代码在工程中加入items  
     在工程的 > AppDelegate.m   
-> - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {  
+>       - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions    {  
 
->     //代码创建快捷视图列表的方法，  
->     //创建快捷视图列表有两种方法，一种是这样用代码写，另一种是编辑info.plist文件中的UIApplicationShortcutItems   
->     //这里我们使用编辑info。plist 的方式创建  
->     //    [self create3DTouchShotItems];  
-> }
+>           //代码创建快捷视图列表的方法，  
+>           //创建快捷视图列表有两种方法，一种是这样用代码写，另一种是编辑info.plist文件中的UIApplicationShortcutItems   
+>           //这里我们使用编辑info。plist 的方式创建  
+>           //    [self create3DTouchShotItems];  
+>   }
 
 
-> - (void)create3DTouchShotItems {  
+>       - (void)create3DTouchShotItems {  
 
->     //创建快捷item的icon UIApplicationShortcutItemIconFile 
+>           //创建快捷item的icon UIApplicationShortcutItemIconFile 
 > 
->     UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"icon1"];
->     UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"icon2"];
->     UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"icon3"];
+>           UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"icon1"];
+>           UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"icon2"];
+>           UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"icon3"];
 > 
->     //创建快捷item的userinfo UIApplicationShortcutItemUserInfo
->     NSDictionary *info1 = @{@"url":@"url1"};
->     NSDictionary *info2 = @{@"url":@"url2"};
->     NSDictionary *info3 = @{@"url":@"url3"};
+>           //创建快捷item的userinfo UIApplicationShortcutItemUserInfo
+>           NSDictionary *info1 = @{@"url":@"url1"};
+>           NSDictionary *info2 = @{@"url":@"url2"};
+>           NSDictionary *info3 = @{@"url":@"url3"};
 > 
->     //创建ShortcutItem
->     UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"XS_3DTocuh_1" localizedTitle:@"王学森" localizedSubtitle:@"中文名字" icon:icon1 userInfo:info1];
->     UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"XS_3DTocuh_2" localizedTitle:@"WangXuesen" localizedSubtitle:@"拼音名字" icon:icon2 userInfo:info2];
->     UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"XS_3DTocuh_3" localizedTitle:@"Jsen" localizedSubtitle:@"Eg Name" icon:icon3 userInfo:info3];
+>           //创建ShortcutItem
+>           UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"XS_3DTocuh_1" localizedTitle:@"王学森" localizedSubtitle:@"中文名字" icon:icon1 userInfo:info1];
+>           UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"XS_3DTocuh_2" localizedTitle:@"WangXuesen" localizedSubtitle:@"拼音名字" icon:icon2 userInfo:info2];
+>           UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"XS_3DTocuh_3" localizedTitle:@"Jsen" localizedSubtitle:@"Eg Name" icon:icon3 userInfo:info3];
 
->     NSArray *items = @[item1, item2, item3];
->     [UIApplication sharedApplication].shortcutItems = items;
-> }
+>           NSArray *items = @[item1, item2, item3];
+>           [UIApplication sharedApplication].shortcutItems = items;
+>       }
 
 ##  Step 2 : 在工程中处理屏幕快捷视图的点击事件响应
 
 在工程的 > AppDelegate.m 
-> - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+>       - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
->     //代码创建快捷视图列表的方法，  
->     //创建快捷视图列表有两种方法，一种是这样用代码写，另一种是编辑info.plist文件中的UIApplicationShortcutItems  
->     //这里我们使用编辑info。plist 的方式创建  
->     //    [self create3DTouchShotItems];  
+>           //代码创建快捷视图列表的方法，  
+>           //创建快捷视图列表有两种方法，一种是这样用代码写，另一种是编辑info.plist文件中的UIApplicationShortcutItems  
+>           //这里我们使用编辑info。plist 的方式创建  
+>           //    [self create3DTouchShotItems];  
 
->     //获取在快捷视图列表点击的item，并对其点击作出反应，此处是是打印出userinfo中的数据  
->    UIApplicationShortcutItem *item = [launchOptions valueForKey:UIApplicationLaunchOptionsShortcutItemKey];  
->     [self clickedWithShortcutItem:item];  
+>           //获取在快捷视图列表点击的item，并对其点击作出反应，此处是是打印出userinfo中的数据  
+>           UIApplicationShortcutItem *item = [launchOptions valueForKey:UIApplicationLaunchOptionsShortcutItemKey];  
+>           [self clickedWithShortcutItem:item];  
 
 
->     // Override point for customization after application launch.  
->     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];  
->     self.window.backgroundColor = [UIColor whiteColor];  
->     _rootVC = [[ViewController alloc] init];  
->     UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:_rootVC];  
+>           // Override point for customization after application launch.  
+>           self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];  
+>           self.window.backgroundColor = [UIColor whiteColor];  
+>           _rootVC = [[ViewController alloc] init];  
+>           UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:_rootVC];  
 
->     self.window.rootViewController = nav;  
->     [self.window makeKeyAndVisible];  
->     return YES;  
+>           self.window.rootViewController = nav;  
+>           [self.window makeKeyAndVisible];  
+>           return YES;  
 
-> }  
+>       }  
 
 ## Step 3 : 给列表视图中的cell注册 3DTouch 事件  
 
@@ -174,22 +175,22 @@
 
 2，在注册前完成Step 1  
 
-3，注册: > [self registerForPreviewingWithDelegate:self sourceView:cell];  
+3，注册: [self registerForPreviewingWithDelegate:self sourceView:cell];  
 
-> - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{  
->     XSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XSTableViewCell"];  
->     if (cell == nil) {  
->         cell = [XSTableViewCell cellWithTableView:tableView];  
->     }  
->     cell.dataFrame = self.dataSource[indexPath.row];  
->     //给cell注册代理，使其支持3DTouch手势  
->     if (self.support3DTouch) {  
->        [self registerForPreviewingWithDelegate:self sourceView:cell];  
->     }  
+>       - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{  
+>           XSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"XSTableViewCell"];  
+>           if (cell == nil) {  
+>               cell = [XSTableViewCell cellWithTableView:tableView];  
+>           }  
+>           cell.dataFrame = self.dataSource[indexPath.row];  
+>           //给cell注册代理，使其支持3DTouch手势  
+>           if (self.support3DTouch) {  
+>               [self registerForPreviewingWithDelegate:self sourceView:cell];  
+>           }  
 
->     return cell;  
+>           return cell;  
 
-> }  
+>       }  
 
 ## Step 4 : 完成UIViewControllerPreviewingDelegate 协议回调，实现Peek Pop  
 ### Peek 效果  
@@ -197,40 +198,39 @@
 
 ### Peek 实现代码：  
 
-> #pragma mark - 3DTouch  UIViewControllerPreviewingDelegate  
 > //此方法是轻按控件时，跳出peek的代理方法
-> - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location  
-> {  
->     //防止重复加入  
->     if ([self.presentedViewController isKindOfClass:[XSPeekViewController class]])  
->     {  
->         return nil;  
->     }  
->     else  
->     {  
->         XSTableViewCell *cell = (XSTableViewCell *)previewingContext.sourceView;  
->         XSCellData * cellData = cell.dataFrame.cellData;  
->         XSPeekViewController *peekViewController = [[XSPeekViewController alloc] init];  
->         peekViewController.cellData = cellData;  
->         return peekViewController;  
->     }  
-> }  
+>       - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location  
+>       {  
+>           //防止重复加入  
+>           if ([self.presentedViewController isKindOfClass:[XSPeekViewController class]])  
+>           {  
+>               return nil;  
+>           }  
+>           else  
+>           {  
+>               XSTableViewCell *cell = (XSTableViewCell *)previewingContext.sourceView;  
+>               XSCellData * cellData = cell.dataFrame.cellData;  
+>               XSPeekViewController *peekViewController = [[XSPeekViewController alloc] init];  
+>               peekViewController.cellData = cellData;  
+>               return peekViewController;  
+>           }  
+>       }  
 
 ### Pop 代码  
 
 > //此方法是重按peek时，跳入pop的代理方法  
-> - (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit  
-> {    
->       XSTableViewCell *cell = (XSTableViewCell *)previewingContext.sourceView;  
->       XSCellData * cellData = cell.dataFrame.cellData;  
->       XSPopViewController *popViewController = [[XSPopViewController alloc] init];  
->       popViewController.cellData = cellData;  
->       //以prentViewController的形式展现  
->       [self showViewController:popViewController sender:self];  
+>       - (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit  
+>       {    
+>               XSTableViewCell *cell = (XSTableViewCell *)previewingContext.sourceView;  
+>               XSCellData * cellData = cell.dataFrame.cellData;  
+>               XSPopViewController *popViewController = [[XSPopViewController alloc] init];  
+>               popViewController.cellData = cellData;  
+>               //以prentViewController的形式展现  
+>               [self showViewController:popViewController sender:self];  
 
->       //以push的形势展现  
->       //    [self.navigationController pushViewController:popViewController animated:YES];  
-> }  
+>               //以push的形势展现  
+>               //    [self.navigationController pushViewController:popViewController animated:YES];  
+>       }  
 
 ## Step 5 : 在Peek状态下向上滑动出现的按钮配置方法  
  在 > XSPeekViewController.m  
