@@ -10,11 +10,11 @@
     在iOS9中有一个新的枚举
 
 
-> typedef NS_ENUM(NSInteger, UIForceTouchCapability) {  
-        UIForceTouchCapabilityUnknown        = 0,  
-        UIForceTouchCapabilityUnavailable    = 1,  
-        UIForceTouchCapabilityAvailable      = 2
-> };
+>       typedef NS_ENUM(NSInteger, UIForceTouchCapability) {  
+                UIForceTouchCapabilityUnknown        = 0,  
+                UIForceTouchCapabilityUnavailable    = 1,  
+                UIForceTouchCapabilityAvailable      = 2
+>       };
 
 > UIForceTouchCapabilityUnknown     : 未知的支持属性  
 > UIForceTouchCapabilityUnavailable : 不支持  
@@ -24,37 +24,37 @@
 
 ###定义一个标志支持的BOOL属性  
 `
-@property (nonatomic , assign) BOOL            support3DTouch;
+        @property (nonatomic , assign) BOOL            support3DTouch;
 `
 
 ###在生命周期函数中检测支持与否
 
 
-> - (void)viewWillAppear:(BOOL)animated {  
->     [super viewWillAppear:animated];  
->     //检测当前是否支持3DTouch  
->     self.support3DTouch = [self support3DTouch];  
-> }
+>       - (void)viewWillAppear:(BOOL)animated {  
+>          \[super viewWillAppear:animated];  
+>           //检测当前是否支持3DTouch  
+>           self.support3DTouch = [self support3DTouch];  
+>       }
 
 
 ###在生命周期外检测支持与否（因为有可能出了生命周期函数而发生了变化）
 
-> - (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection NS_AVAILABLE_IOS(8_0) {     
->     self.support3DTouch = [self support3DTouch];  
-> }  
+>       - (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection NS_AVAILABLE_IOS(8_0) {     
+>           self.support3DTouch = [self support3DTouch];  
+>       }  
 
 ###检测是否支持3DTouch的方法
 
-> - (BOOL)support3DTouch  
-> {  
->     // 如果开启了3D touch  
->     if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable)  
->     {  
->         return YES;  
->     }  
->         return NO;  
->     }  
-> }  
+>       - (BOOL)support3DTouch  
+>       {  
+>           // 如果开启了3D touch  
+>           if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable)  
+>           {  
+>               return YES;  
+>           }  
+>               return NO;  
+>           }  
+>       }  
 
 ##  Step 1 : 配置快捷视图列表   
 
