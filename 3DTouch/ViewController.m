@@ -55,12 +55,11 @@
     _tbView.dataSource = self;
     _tbView.delegate = self;
     [self.view addSubview:_tbView];
-    
     //模拟网络请求回json后的解析过程
     self.dataSource = [[NSMutableArray alloc] init];
     for (int i = 0; i < 10; i ++) {
         NSDictionary * dic = @{
-                               @"name" : @"王学森",
+                               @"name" : [NSString stringWithFormat:@"王学森forCell_%d",i],
                                @"header" : @"icon.jpg"
                                };
         XSCellData * cellData = [[XSCellData alloc] init];

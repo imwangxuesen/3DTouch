@@ -16,6 +16,16 @@
 		4CF6E7891BFD5BF100C91969 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF6E7871BFD5BF100C91969 /* LaunchScreen.storyboard */; };
 		4CF6E7941BFD5BF100C91969 /* _DTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6E7931BFD5BF100C91969 /* _DTouchTests.m */; };
 		4CF6E79F1BFD5BF100C91969 /* _DTouchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6E79E1BFD5BF100C91969 /* _DTouchUITests.m */; };
+		4CF6E7AE1BFD660500C91969 /* XSPeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6E7AD1BFD660500C91969 /* XSPeekViewController.m */; };
+		4CF6E7B11BFD661F00C91969 /* XSPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6E7B01BFD661F00C91969 /* XSPopViewController.m */; };
+		4CF6E7B41BFD663000C91969 /* XSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6E7B31BFD663000C91969 /* XSTableViewCell.m */; };
+		4CF6E7B71BFD680F00C91969 /* XSCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6E7B61BFD680F00C91969 /* XSCellData.m */; };
+		4CF6E7BA1BFD682300C91969 /* XSCellDataFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6E7B91BFD682300C91969 /* XSCellDataFrame.m */; };
+		4CF6E7BC1BFD695B00C91969 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF6E7BB1BFD695B00C91969 /* CoreGraphics.framework */; };
+		4CF6E7C21BFDAF8C00C91969 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CF6E7BE1BFDAF8C00C91969 /* icon.jpg */; };
+		4CF6E7C31BFDAF8C00C91969 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF6E7BF1BFDAF8C00C91969 /* icon1.png */; };
+		4CF6E7C41BFDAF8C00C91969 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF6E7C01BFDAF8C00C91969 /* icon2.png */; };
+		4CF6E7C51BFDAF8C00C91969 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CF6E7C11BFDAF8C00C91969 /* icon3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +63,21 @@
 		4CF6E79A1BFD5BF100C91969 /* 3DTouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3DTouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF6E79E1BFD5BF100C91969 /* _DTouchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _DTouchUITests.m; sourceTree = "<group>"; };
 		4CF6E7A01BFD5BF100C91969 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CF6E7AC1BFD660500C91969 /* XSPeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSPeekViewController.h; sourceTree = "<group>"; };
+		4CF6E7AD1BFD660500C91969 /* XSPeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSPeekViewController.m; sourceTree = "<group>"; };
+		4CF6E7AF1BFD661F00C91969 /* XSPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSPopViewController.h; sourceTree = "<group>"; };
+		4CF6E7B01BFD661F00C91969 /* XSPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSPopViewController.m; sourceTree = "<group>"; };
+		4CF6E7B21BFD663000C91969 /* XSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSTableViewCell.h; sourceTree = "<group>"; };
+		4CF6E7B31BFD663000C91969 /* XSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSTableViewCell.m; sourceTree = "<group>"; };
+		4CF6E7B51BFD680F00C91969 /* XSCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSCellData.h; sourceTree = "<group>"; };
+		4CF6E7B61BFD680F00C91969 /* XSCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSCellData.m; sourceTree = "<group>"; };
+		4CF6E7B81BFD682300C91969 /* XSCellDataFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSCellDataFrame.h; sourceTree = "<group>"; };
+		4CF6E7B91BFD682300C91969 /* XSCellDataFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSCellDataFrame.m; sourceTree = "<group>"; };
+		4CF6E7BB1BFD695B00C91969 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4CF6E7BE1BFDAF8C00C91969 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
+		4CF6E7BF1BFDAF8C00C91969 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		4CF6E7C01BFDAF8C00C91969 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		4CF6E7C11BFDAF8C00C91969 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF6E7BC1BFD695B00C91969 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +109,7 @@
 		4CF6E76A1BFD5BF100C91969 = {
 			isa = PBXGroup;
 			children = (
+				4CF6E7BB1BFD695B00C91969 /* CoreGraphics.framework */,
 				4CF6E7751BFD5BF100C91969 /* 3DTouch */,
 				4CF6E7921BFD5BF100C91969 /* 3DTouchTests */,
 				4CF6E79D1BFD5BF100C91969 /* 3DTouchUITests */,
@@ -103,6 +130,17 @@
 		4CF6E7751BFD5BF100C91969 /* 3DTouch */ = {
 			isa = PBXGroup;
 			children = (
+				4CF6E7BD1BFDAF8C00C91969 /* resource */,
+				4CF6E7B51BFD680F00C91969 /* XSCellData.h */,
+				4CF6E7B61BFD680F00C91969 /* XSCellData.m */,
+				4CF6E7B81BFD682300C91969 /* XSCellDataFrame.h */,
+				4CF6E7B91BFD682300C91969 /* XSCellDataFrame.m */,
+				4CF6E7B21BFD663000C91969 /* XSTableViewCell.h */,
+				4CF6E7B31BFD663000C91969 /* XSTableViewCell.m */,
+				4CF6E7AF1BFD661F00C91969 /* XSPopViewController.h */,
+				4CF6E7B01BFD661F00C91969 /* XSPopViewController.m */,
+				4CF6E7AC1BFD660500C91969 /* XSPeekViewController.h */,
+				4CF6E7AD1BFD660500C91969 /* XSPeekViewController.m */,
 				4CF6E7791BFD5BF100C91969 /* AppDelegate.h */,
 				4CF6E77A1BFD5BF100C91969 /* AppDelegate.m */,
 				4CF6E77C1BFD5BF100C91969 /* ViewController.h */,
@@ -141,6 +179,17 @@
 				4CF6E7A01BFD5BF100C91969 /* Info.plist */,
 			);
 			path = 3DTouchUITests;
+			sourceTree = "<group>";
+		};
+		4CF6E7BD1BFDAF8C00C91969 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				4CF6E7BE1BFDAF8C00C91969 /* icon.jpg */,
+				4CF6E7BF1BFDAF8C00C91969 /* icon1.png */,
+				4CF6E7C01BFDAF8C00C91969 /* icon2.png */,
+				4CF6E7C11BFDAF8C00C91969 /* icon3.png */,
+			);
+			path = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +259,7 @@
 				TargetAttributes = {
 					4CF6E7721BFD5BF100C91969 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 9F3T7JVDRD;
 					};
 					4CF6E78E1BFD5BF100C91969 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -246,9 +296,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CF6E7C21BFDAF8C00C91969 /* icon.jpg in Resources */,
 				4CF6E7891BFD5BF100C91969 /* LaunchScreen.storyboard in Resources */,
+				4CF6E7C51BFDAF8C00C91969 /* icon3.png in Resources */,
 				4CF6E7861BFD5BF100C91969 /* Assets.xcassets in Resources */,
+				4CF6E7C31BFDAF8C00C91969 /* icon1.png in Resources */,
 				4CF6E7811BFD5BF100C91969 /* Main.storyboard in Resources */,
+				4CF6E7C41BFDAF8C00C91969 /* icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +329,12 @@
 			files = (
 				4CF6E77E1BFD5BF100C91969 /* ViewController.m in Sources */,
 				4CF6E77B1BFD5BF100C91969 /* AppDelegate.m in Sources */,
+				4CF6E7AE1BFD660500C91969 /* XSPeekViewController.m in Sources */,
+				4CF6E7B11BFD661F00C91969 /* XSPopViewController.m in Sources */,
+				4CF6E7B71BFD680F00C91969 /* XSCellData.m in Sources */,
+				4CF6E7BA1BFD682300C91969 /* XSCellDataFrame.m in Sources */,
 				4CF6E7841BFD5BF100C91969 /* _DTouch.xcdatamodeld in Sources */,
+				4CF6E7B41BFD663000C91969 /* XSTableViewCell.m in Sources */,
 				4CF6E7781BFD5BF100C91969 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,10 +476,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zheng Wang (D6WM7598CJ)";
 				INFOPLIST_FILE = 3DTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.3DTouch.Demo.-DTouch";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcb.hearst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8b0d8e2e-03bf-48ea-b9de-2e341c6dc20b";
 			};
 			name = Debug;
 		};
@@ -428,10 +490,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zheng Wang (D6WM7598CJ)";
 				INFOPLIST_FILE = 3DTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.3DTouch.Demo.-DTouch";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcb.hearst;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8b0d8e2e-03bf-48ea-b9de-2e341c6dc20b";
 			};
 			name = Release;
 		};
@@ -502,6 +567,7 @@
 				4CF6E7A51BFD5BF100C91969 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CF6E7A61BFD5BF100C91969 /* Build configuration list for PBXNativeTarget "3DTouchTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +576,7 @@
 				4CF6E7A81BFD5BF100C91969 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CF6E7A91BFD5BF100C91969 /* Build configuration list for PBXNativeTarget "3DTouchUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +585,7 @@
 				4CF6E7AB1BFD5BF100C91969 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
