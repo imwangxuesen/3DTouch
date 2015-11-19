@@ -7,16 +7,34 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
-
+@property (nonatomic , strong) ViewController * rootVC;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //代码创建快捷视图列表的方法，
+    //创建快捷视图列表有两种方法，一种是这样用代码写，另一种是编辑info.plist文件中的UIApplicationShortcutItems
+    //这里我们使用编辑info。plist 的方式创建
+//    [self create3DTouchShotItems];
+    
+    //获取在快捷视图列表点击的item，并对其点击作出反应，此处是是打印出userinfo中的数据
+    UIApplicationShortcutItem *item = [launchOptions valueForKey:UIApplicationLaunchOptionsShortcutItemKey];
+    [self clickedWithShortcutItem:item];
+    
+    
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    _rootVC = [[ViewController alloc] init];
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:_rootVC];
+    
+    self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
     
 }
@@ -44,6 +62,38 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+
+
+#pragma mark - 3D Touch
+
+
+-(void)clickedWithShortcutItem:(UIApplicationShortcutItem *)item
+{
+    if (item.userInfo)
+    {
+        NSLog(@"%@",item.userInfo[@"url"]);
+    }
+}
+- (void)create3DTouchShotItems {
+    //创建快捷item的icon UIApplicationShortcutItemIconFile
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"icon1"];
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"icon2"];
+    UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"icon3"];
+    
+    //创建快捷item的userinfo UIApplicationShortcutItemUserInfo
+    NSDictionary *info1 = @{@"url":@"url1"};
+    NSDictionary *info2 = @{@"url":@"url2"};
+    NSDictionary *info3 = @{@"url":@"url3"};
+    
+    //创建ShortcutItem
+    UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"XS_3DTocuh_1" localizedTitle:@"王学森" localizedSubtitle:@"中文名字" icon:icon1 userInfo:info1];
+    UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"XS_3DTocuh_2" localizedTitle:@"WangXuesen" localizedSubtitle:@"拼音名字" icon:icon2 userInfo:info2];
+    UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"XS_3DTocuh_3" localizedTitle:@"Jsen" localizedSubtitle:@"Eg Name" icon:icon3 userInfo:info3];
+    
+    NSArray *items = @[item1, item2, item3];
+    [UIApplication sharedApplication].shortcutItems = items;
+}
+
 
 #pragma mark - Core Data stack
 

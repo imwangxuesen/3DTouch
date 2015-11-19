@@ -22,6 +22,54 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>icon1.png</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>这是中文名字</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>王学森</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>XS_3D_CHINESE</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>url</key>
+				<string>中文名字王学森</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>icon2.png</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>这是英文名字</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Jsen</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>XS_3D_English</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>url</key>
+				<string>Eg Name is Jsen</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>icon3.png</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>Pin Yin</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>WangXuesen</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>XS_3D_PinYin</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>url</key>
+				<string>Pin Yin WangXuesen </string>
+			</dict>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
