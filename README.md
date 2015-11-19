@@ -143,7 +143,7 @@
 
 ##  Step 2 : 在工程中处理屏幕快捷视图的点击事件响应
 
-在工程的 > AppDelegate.m 
+在工程的  AppDelegate.m 
 >       - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 >           //代码创建快捷视图列表的方法，  
@@ -165,7 +165,6 @@
 >           self.window.rootViewController = nav;  
 >           [self.window makeKeyAndVisible];  
 >           return YES;  
-
 >       }  
 
 ## Step 3 : 给列表视图中的cell注册 3DTouch 事件  
@@ -199,7 +198,7 @@
 ### Peek 实现代码：  
 
 > //此方法是轻按控件时，跳出peek的代理方法
->       - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location  
+>       - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing\>)previewingContext viewControllerForLocation:(CGPoint)location  
 >       {  
 >           //防止重复加入  
 >           if ([self.presentedViewController isKindOfClass:[XSPeekViewController class]])  
@@ -219,7 +218,7 @@
 ### Pop 代码  
 
 > //此方法是重按peek时，跳入pop的代理方法  
->       - (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit  
+>       - (void)previewingContext:(id<UIViewControllerPreviewing\>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit  
 >       {    
 >               XSTableViewCell *cell = (XSTableViewCell *)previewingContext.sourceView;  
 >               XSCellData * cellData = cell.dataFrame.cellData;  
@@ -233,10 +232,10 @@
 >       }  
 
 ## Step 5 : 在Peek状态下向上滑动出现的按钮配置方法  
- 在 > XSPeekViewController.m  
+ 在 XSPeekViewController.m  
  完成 > - (NSArray<id<UIPreviewActionItem>> *)previewActionItems  回调方法  
 `
-> - (NSArray\<id\<UIPreviewActionItem>> *)previewActionItems  
+> - (NSArray\<id<UIPreviewActionItem\>\> *)previewActionItems  
 > {  
 > // 生成UIPreviewAction  
 >     UIPreviewAction *action1 = [UIPreviewAction actionWithTitle:@"事件 1" style:UIPreviewActionStyleDefault                 handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
