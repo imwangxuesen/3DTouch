@@ -31,7 +31,7 @@
 
 
 >       - (void)viewWillAppear:(BOOL)animated {  
->          \[super viewWillAppear:animated];  
+>          [super viewWillAppear:animated];  
 >           //检测当前是否支持3DTouch  
 >           self.support3DTouch = [self support3DTouch];  
 >       }
@@ -199,7 +199,7 @@
 
 > //此方法是轻按控件时，跳出peek的代理方法
 
->       - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing\>)previewingContext viewControllerForLocation:(CGPoint)location  
+>       - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location  
 >       {  
 >           //防止重复加入  
 >           if ([self.presentedViewController isKindOfClass:[XSPeekViewController class]])  
@@ -220,7 +220,7 @@
 
 > //此方法是重按peek时，跳入pop的代理方法
 
->       - (void)previewingContext:(id<UIViewControllerPreviewing\>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit  
+>       - (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit  
 >       {   
 >           XSTableViewCell *cell = (XSTableViewCell *)previewingContext.sourceView;  
 >           XSCellData * cellData = cell.dataFrame.cellData;  
@@ -237,33 +237,33 @@
  在 XSPeekViewController.m  
  完成  - (NSArray<id<UIPreviewActionItem>> *)previewActionItems  回调方法  
 
->       - (NSArray\<id\<UIPreviewActionItem\>\> *)previewActionItems  
+>       - (NSArray<id<UIPreviewActionItem>> *)previewActionItems  
 >       {  
 >       // 生成UIPreviewAction  
->           UIPreviewAction *action1 = \[UIPreviewAction actionWithTitle:@"事件 1" style:UIPreviewActionStyleDefault                 handler:^(UIPreviewAction \* _Nonnull action, UIViewController \* _Nonnull previewViewController) {  
+>           UIPreviewAction *action1 = [UIPreviewAction actionWithTitle:@"事件 1" style:UIPreviewActionStyleDefault                 handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >               NSLog(@"Action 1 selected");  
 >           }];  
->           UIPreviewAction *action2 = \[UIPreviewAction actionWithTitle:@"事件 2" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction \* _Nonnull action, UIViewController \* _Nonnull previewViewController) {  
+>           UIPreviewAction *action2 = [UIPreviewAction actionWithTitle:@"事件 2" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >               NSLog(@"Action 2 selected");  
 >           }];  
->           UIPreviewAction *action3 = \[UIPreviewAction actionWithTitle:@"事件 3" style:UIPreviewActionStyleSelected   handler:^(UIPreviewAction \* _Nonnull action, UIViewController \* _Nonnull previewViewController) {  
+>           UIPreviewAction *action3 = [UIPreviewAction actionWithTitle:@"事件 3" style:UIPreviewActionStyleSelected   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >               NSLog(@"Action 3 selected");  
 >           }];  
->           UIPreviewAction *tap1 = \[UIPreviewAction actionWithTitle:@"按钮 1" style:UIPreviewActionStyleDefault   handler:^(UIPreviewAction \* _Nonnull action, UIViewController \* _Nonnull previewViewController) {  
+>           UIPreviewAction *tap1 = [UIPreviewAction actionWithTitle:@"按钮 1" style:UIPreviewActionStyleDefault   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >               NSLog(@"tap 1 selected");  
 >           }];  
->           UIPreviewAction *tap2 = \[UIPreviewAction actionWithTitle:@"按钮 2" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction \* _Nonnull action, UIViewController \* _Nonnull previewViewController) {  
+>           UIPreviewAction *tap2 = [UIPreviewAction actionWithTitle:@"按钮 2" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >               NSLog(@"tap 2 selected");  
 >           }];  
->           UIPreviewAction *tap3 = \[UIPreviewAction actionWithTitle:@"按钮 3" style:UIPreviewActionStyleSelected   handler:^(UIPreviewAction \* _Nonnull action, UIViewController \* _Nonnull previewViewController) {  
+>           UIPreviewAction *tap3 = [UIPreviewAction actionWithTitle:@"按钮 3" style:UIPreviewActionStyleSelected   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
 >               NSLog(@"tap 3 selected");  
 >           }];  
 
->           NSArray *actions = @\[action1, action2, action3\];  
->           NSArray *taps = @\[tap1, tap2, tap3\];  
->           UIPreviewActionGroup *group1 = \[UIPreviewActionGroup actionGroupWithTitle:@"一组事件"   style:UIPreviewActionStyleDefault actions:actions];  
->           UIPreviewActionGroup *group2 = \[UIPreviewActionGroup actionGroupWithTitle:@"一组按钮"   style:UIPreviewActionStyleDefault actions:taps];  
->           NSArray *group = @\[group1,group2];  
+>           NSArray *actions = @[action1, action2, action3];  
+>           NSArray *taps = @[tap1, tap2, tap3];  
+>           UIPreviewActionGroup *group1 = [UIPreviewActionGroup actionGroupWithTitle:@"一组事件"   style:UIPreviewActionStyleDefault actions:actions];  
+>           UIPreviewActionGroup *group2 = [UIPreviewActionGroup actionGroupWithTitle:@"一组按钮"   style:UIPreviewActionStyleDefault actions:taps];  
+>           NSArray *group = @[group1,group2];  
 
 >           //当然你也可以反三个单独的action对象的数组，而不是group，具体效果，可以自己试一下  
 
