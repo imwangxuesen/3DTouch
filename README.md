@@ -223,46 +223,46 @@
 ## Step 5 : 在Peek状态下向上滑动出现的按钮配置方法  
  在 > XSPeekViewController.m  
  完成 > - (NSArray<id<UIPreviewActionItem>> *)previewActionItems  回调方法  
-
-> \- (NSArray<id<UIPreviewActionItem>> *)previewActionItems  
+`
+> - (NSArray\<id\<UIPreviewActionItem>> *)previewActionItems  
 > {  
 
-    > // 生成UIPreviewAction  
-    >     UIPreviewAction *action2 = [UIPreviewAction actionWithTitle:@"事件 1" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
-        >         NSLog(@"Action 1 selected");  
-    >     }];  
+> // 生成UIPreviewAction  
+>     UIPreviewAction *action1 = [UIPreviewAction actionWithTitle:@"事件 1" style:UIPreviewActionStyleDefault                 handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
+>        NSLog(@"Action 1 selected");  
+>     }];  
 
-    >     UIPreviewAction *action2 = [UIPreviewAction actionWithTitle:@"事件 2" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
-        >         NSLog(@"Action 2 selected");  
-    >     }];  
+>     UIPreviewAction *action2 = [UIPreviewAction actionWithTitle:@"事件 2" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
+>         NSLog(@"Action 2 selected");  
+>     }];  
 
-    >     UIPreviewAction *action3 = [UIPreviewAction actionWithTitle:@"事件 3" style:UIPreviewActionStyleSelected    handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
-    >         NSLog(@"Action 3 selected");  
-    >     }];  
+>     UIPreviewAction *action3 = [UIPreviewAction actionWithTitle:@"事件 3" style:UIPreviewActionStyleSelected   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
+>         NSLog(@"Action 3 selected");  
+>     }];  
 
-    >     UIPreviewAction *tap1 = [UIPreviewAction actionWithTitle:@"按钮 1" style:UIPreviewActionStyleDefault   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
-        >         NSLog(@"tap 1 selected");  
-    >     }];  
+>     UIPreviewAction *tap1 = [UIPreviewAction actionWithTitle:@"按钮 1" style:UIPreviewActionStyleDefault   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
+>         NSLog(@"tap 1 selected");  
+>     }];  
 
-    >     UIPreviewAction *tap2 = [UIPreviewAction actionWithTitle:@"按钮 2" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
-        >         NSLog(@"tap 2 selected");  
-    >     }];  
+>     UIPreviewAction *tap2 = [UIPreviewAction actionWithTitle:@"按钮 2" style:UIPreviewActionStyleDestructive   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
+>         NSLog(@"tap 2 selected");  
+>     }];  
 
-    >     UIPreviewAction *tap3 = [UIPreviewAction actionWithTitle:@"按钮 3" style:UIPreviewActionStyleSelected   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
-        >         NSLog(@"tap 3 selected");  
-    >     }];  
+>     UIPreviewAction *tap3 = [UIPreviewAction actionWithTitle:@"按钮 3" style:UIPreviewActionStyleSelected   handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {  
+>         NSLog(@"tap 3 selected");  
+>     }];  
 
-    >     NSArray *actions = @[action1, action2, action3];  
-    >     NSArray *taps = @[tap1, tap2, tap3];  
-    >     UIPreviewActionGroup *group1 = [UIPreviewActionGroup actionGroupWithTitle:@"一组事件"   style:UIPreviewActionStyleDefault actions:actions];  
-    >     UIPreviewActionGroup *group2 = [UIPreviewActionGroup actionGroupWithTitle:@"一组按钮"   style:UIPreviewActionStyleDefault actions:taps];  
-    >     NSArray *group = @[group1,group2];  
+>     NSArray *actions = @[action1, action2, action3];  
+>     NSArray *taps = @[tap1, tap2, tap3];  
+>     UIPreviewActionGroup *group1 = [UIPreviewActionGroup actionGroupWithTitle:@"一组事件"   style:UIPreviewActionStyleDefault actions:actions];  
+>     UIPreviewActionGroup *group2 = [UIPreviewActionGroup actionGroupWithTitle:@"一组按钮"   style:UIPreviewActionStyleDefault actions:taps];  
+>     NSArray *group = @[group1,group2];  
 
-    >     //当然你也可以反三个单独的action对象的数组，而不是group，具体效果，可以自己试一下  
+>     //当然你也可以反三个单独的action对象的数组，而不是group，具体效果，可以自己试一下  
 
-    >     return group;  
+>     return group;  
 > }  
-
+`
 ## Step 6 : 特别注意事项
 
 > 1，Peek Pop view都是普通的UIViewController，完全是自己继承后创建的  
