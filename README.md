@@ -68,22 +68,22 @@
     2，按照下边的键值粘贴复制即可   
 
 `
-<key>UIApplicationShortcutItems</key>       
-    <array>             
-        <dict>      
-                <key>UIApplicationShortcutItemIconType</key>        
-                <string>UIApplicationShortcutIconTypePlay</string>      
-                <key>UIApplicationShortcutItemTitle</key>       
-                <string>Play</string>       
-                <key>UIApplicationShortcutItemType</key>        
-                <string>static</string>     
-                <key>UIApplicationShortcutItemUserInfo</key>        
-                <dict>      
-                    <key>key1</key>     
-                    <string>value1</string>     
-                </dict>     
-        </dict>     
-    </array>        
+<key>UIApplicationShortcutItems</key>         
+    <array>               
+        <dict>        
+                <key>UIApplicationShortcutItemIconType</key>          
+                <string>UIApplicationShortcutIconTypePlay</string>        
+                <key>UIApplicationShortcutItemTitle</key>         
+                <string>Play</string>         
+                <key>UIApplicationShortcutItemType</key>          
+                <string>static</string>       
+                <key>UIApplicationShortcutItemUserInfo</key>          
+                <dict>        
+                    <key>key1</key>       
+                    <string>value1</string>       
+                </dict>       
+        </dict>       
+    </array>          
 `
 
     3，保存修改，然后将工程中的info.plist替换成桌面上的info.plist即可  
