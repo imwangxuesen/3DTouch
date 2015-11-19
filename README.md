@@ -67,24 +67,24 @@
     1，将工程中的info.plist拷贝一份到桌面－－> 右键 --> 打开方式 －－> 文本编辑  
     2，按照下边的键值粘贴复制即可   
 
-- <key>UIApplicationShortcutItems</key>  
-- <array>  
-- <dict>  
-- <key>UIApplicationShortcutItemIconFile</key>  
-- <string>icon1.png</string>  
-- <key>UIApplicationShortcutItemSubtitle</key>  
-- <string>这是中文名字</string>  
-- <key>UIApplicationShortcutItemTitle</key>  
-- <string>王学森</string>  
-- <key>UIApplicationShortcutItemType</key>  
-- <string>XS_3D_CHINESE</string>  
-- <key>UIApplicationShortcutItemUserInfo</key>  
-- <dict>  
-- <key>url</key>  
-- <string>中文名字王学森</string>  
-- </dict>  
-- </dict>  
-- </array>  
+`
+<key>UIApplicationShortcutItems</key>
+    <array>
+        <dict>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypePlay</string>
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Play</string>
+                <key>UIApplicationShortcutItemType</key>
+                <string>static</string>
+                <key>UIApplicationShortcutItemUserInfo</key>
+                <dict>
+                    <key>key1</key>
+                    <string>value1</string>
+                </dict>
+        </dict>
+    </array>
+`
 
     3，保存修改，然后将工程中的info.plist替换成桌面上的info.plist即可  
     4，也可以通过可视化的界面添加键值对，如下图：  
