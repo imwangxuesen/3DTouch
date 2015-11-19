@@ -221,16 +221,16 @@
 > //此方法是重按peek时，跳入pop的代理方法
 
 >       - (void)previewingContext:(id<UIViewControllerPreviewing\>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit  
->       {    
->               XSTableViewCell *cell = (XSTableViewCell *)previewingContext.sourceView;  
->               XSCellData * cellData = cell.dataFrame.cellData;  
->               XSPopViewController *popViewController = [[XSPopViewController alloc] init];  
->               popViewController.cellData = cellData;  
->               //以prentViewController的形式展现  
->               [self showViewController:popViewController sender:self];  
+>       {   
+>           XSTableViewCell *cell = (XSTableViewCell *)previewingContext.sourceView;  
+>           XSCellData * cellData = cell.dataFrame.cellData;  
+>           XSPopViewController *popViewController = [[XSPopViewController alloc] init];  
+>           popViewController.cellData = cellData;  
+>           //以prentViewController的形式展现  
+>           [self showViewController:popViewController sender:self];  
 
->               //以push的形势展现  
->               //    [self.navigationController pushViewController:popViewController animated:YES];  
+>           //以push的形势展现  
+>           //    [self.navigationController pushViewController:popViewController animated:YES];  
 >       }  
 
 ## Step 5 : 在Peek状态下向上滑动出现的按钮配置方法  
