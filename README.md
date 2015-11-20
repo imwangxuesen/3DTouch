@@ -2,6 +2,8 @@
 
 ## 先来个效果图
 
+![demoshow](http://ww3.sinaimg.cn/bmiddle/006bdQ7qjw1ey7853zbtpg306e0bchdt.gif)
+
 # 开始搞出些事情
 
 ## Step 0 : 3DTouch 设备支持检测：
@@ -192,8 +194,6 @@
 >       }  
 
 ## Step 4 : 完成UIViewControllerPreviewingDelegate 协议回调，实现Peek Pop  
-### Peek 效果  
-![peek]  
 
 ### Peek 实现代码：  
 
