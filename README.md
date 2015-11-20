@@ -274,7 +274,7 @@
 
 > 1，Peek Pop view都是普通的UIViewController，完全是自己继承后创建的  
 > 2，在个人学习的过程中有一个需求，如果Pop界面有对导航栏，或者工具栏进行隐藏或者显示的操作，在Pop的viewcontroller的生命周期中去操> > 作 , 是没有任何反应的，需要去Peek 的 viewcontroller 中操作（viewWillDisappear）     
-> 3，欢迎各位giter issue ， 也可去我的新浪微博留言 ： @NoemaThinkerMagician   
+> 3，欢迎各位giter issue ， 也可去我的新浪微博留言 ： [@NoemaThinkerMagician](http://weibo.com/imwangxuesen)  
      
 
 
