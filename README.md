@@ -152,12 +152,6 @@
 >           //创建快捷视图列表有两种方法，一种是这样用代码写，另一种是编辑info.plist文件中的UIApplicationShortcutItems  
 >           //这里我们使用编辑info。plist 的方式创建  
 >           //    [self create3DTouchShotItems];  
-
->           //获取在快捷视图列表点击的item，并对其点击作出反应，此处是是打印出userinfo中的数据  
->           UIApplicationShortcutItem *item = [launchOptions valueForKey:UIApplicationLaunchOptionsShortcutItemKey];  
->           [self clickedWithShortcutItem:item];  
-
-
 >           // Override point for customization after application launch.  
 >           self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];  
 >           self.window.backgroundColor = [UIColor whiteColor];  
@@ -167,7 +161,14 @@
 >           self.window.rootViewController = nav;  
 >           [self.window makeKeyAndVisible];  
 >           return YES;  
->       }  
+>       } 
+
+
+>           //获取在快捷视图列表点击的item，并对其点击作出反应，此处是是打印出userinfo中的数据
+>           - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler{
+>           [self clickedWithShortcutItem:shortcutItem];
+>           }
+
 
 ## Step 3 : 给列表视图中的cell注册 3DTouch 事件  
 

@@ -22,9 +22,8 @@
     //这里我们使用编辑info。plist 的方式创建
 //    [self create3DTouchShotItems];
     
-    //获取在快捷视图列表点击的item，并对其点击作出反应，此处是是打印出userinfo中的数据
-    UIApplicationShortcutItem *item = [launchOptions valueForKey:UIApplicationLaunchOptionsShortcutItemKey];
-    [self clickedWithShortcutItem:item];
+    
+
     
     
     // Override point for customization after application launch.
@@ -65,6 +64,14 @@
 
 
 #pragma mark - 3D Touch
+
+//获取在快捷视图列表点击的item，并对其点击作出反应，此处是是打印出userinfo中的数据
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler{
+    
+    [self clickedWithShortcutItem:shortcutItem];
+    
+    
+}
 
 
 -(void)clickedWithShortcutItem:(UIApplicationShortcutItem *)item
