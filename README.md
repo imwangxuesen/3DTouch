@@ -165,9 +165,9 @@
 
 
 >           //获取在快捷视图列表点击的item，并对其点击作出反应，此处是是打印出userinfo中的数据
->           - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler{
+>       - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void(^)(BOOL succeeded))completionHandler{
 >           [self clickedWithShortcutItem:shortcutItem];
->           }
+>       }
 
 
 ## Step 3 : 给列表视图中的cell注册 3DTouch 事件  
