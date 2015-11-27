@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 @class XSCellData;
+
+@protocol XSPeekViewControllerDelegate <NSObject>
+
+- (void)pushToPopViewControllerWithCellData:(XSCellData *)cellData;
+
+@end
+
 @interface XSPeekViewController : UIViewController
 @property (nonatomic , strong) XSCellData * cellData;
+@property (nonatomic , weak) id<XSPeekViewControllerDelegate>delegate;
 @end

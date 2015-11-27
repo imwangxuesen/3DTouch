@@ -12,7 +12,7 @@
 #import "XSTableViewCell.h"
 #import "XSPeekViewController.h"
 #import "XSPopViewController.h"
-@interface ViewController () <UITableViewDataSource,UITableViewDelegate,UIViewControllerPreviewingDelegate>
+@interface ViewController () <UITableViewDataSource,UITableViewDelegate,UIViewControllerPreviewingDelegate,XSPeekViewControllerDelegate>
 @property (nonatomic , strong) UITableView    *tbView;
 @property (nonatomic , strong) NSMutableArray *dataSource;
 @property (nonatomic , assign) BOOL            support3DTouch;
@@ -72,6 +72,15 @@
     [_tbView reloadData];
     
 }
+#pragma mark - XSPeekViewControllerDelegate
+- (void)pushToPopViewControllerWithCellData:(XSCellData *)cellData{
+    
+    XSPopViewController *popViewController = [[XSPopViewController alloc] init];
+    popViewController.cellData = cellData;
+    [self.navigationController pushViewController:popViewController animated:YES];
+
+    
+}
 
 #pragma mark - 当配置发生了变化，在应用运行中，从支持变成了不支持，回调用这个回调
 - (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection NS_AVAILABLE_IOS(8_0) {
@@ -94,6 +103,7 @@
         XSCellData * cellData = cell.dataFrame.cellData;
         XSPeekViewController *peekViewController = [[XSPeekViewController alloc] init];
         peekViewController.cellData = cellData;
+        peekViewController.delegate = self;
         return peekViewController;
     }
 }

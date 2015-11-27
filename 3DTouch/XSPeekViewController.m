@@ -42,6 +42,7 @@
     // 生成UIPreviewAction
     UIPreviewAction *action1 = [UIPreviewAction actionWithTitle:@"事件 1" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
         NSLog(@"Action 1 selected");
+        [self.delegate pushToPopViewControllerWithCellData:self.cellData];
     }];
     
     UIPreviewAction *action2 = [UIPreviewAction actionWithTitle:@"事件 2" style:UIPreviewActionStyleDestructive handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
